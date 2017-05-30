@@ -1,0 +1,27 @@
+{% extends "default.html" %}
+{% block content %}
+    <header>
+        <h1>Logger</h1>
+        <p>Python Flask-REST API</p>
+    </header>
+    <p>All information from the database is shown below. If you want to sort the
+        data, click on one of the headers in the table.</p>
+
+    <table class="sortable">
+        <tr>
+            <th class="clickable">ID</th>
+            <th class="clickable">Event</th>
+            <th class="clickable">Value</th>
+            <th class="clickable">Time</th>
+        </tr>
+
+        {% for row in data %}
+        <tr>
+            <td>{{ row.id }}</td>
+            <td>{{ row.event }}</td>
+            <td>{{ row.value }}</td>
+            <td>{{ row.time }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
