@@ -18,9 +18,11 @@ class Log(Base):
     __tablename__ = 'log'
     id = Column(String(250), primary_key=True)
     userID = Column(String(250), nullable=False)
+    trigger = Column(String(250), nullable=False)
     event = Column(String(250), nullable=False)
     value = Column(String(250), nullable=False)
     time = Column(String(250), nullable=False)
+    type = Column(String(250), nullable=False)
 
 
 # create the database

@@ -16,8 +16,6 @@ def index():
         # when using the object retrieved from the database outside
         # the with-scope, use the line below to extract the data.
         db_session.expunge_all()
-        print data 
-
     return render_template('index.html', data=data)
 
 
@@ -26,7 +24,7 @@ def submit():
     global x
     data = request.get_json()
     for i in data:
-        entry = Log(id=x, userID=i['id'], event=i['event'], value=i['value'], time=i['time'])
+        entry = Log(id=x, userID=i['id'], event=i['event'], trigger=i['trigger'], value=i['value'], time=i['time'], type=i['type'])
         with session_scope() as db_session:
             db_session.add(entry)
         x += 1
