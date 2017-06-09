@@ -19,7 +19,7 @@ data = [
         "trigger": "switch",
         "value": "23",
         "time": "2017-05-29T15:20:28.661Z",
-        "type": "fucku"}
+        "type": "hihi"}
        ]
 
 response = requests.post(url, data=json.dumps(data), headers=headers)
