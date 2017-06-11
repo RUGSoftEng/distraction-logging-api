@@ -3,8 +3,8 @@ Welcome to the Distraction Shield Logging API
 
 Requirements for Installation
 ============
-Python (2.7+)
-setuptools package (https://pypi.python.org/pypi/setuptools)
+-Python (2.7+)
+-setuptools package (https://pypi.python.org/pypi/setuptools)
 
 Usage
 ============
