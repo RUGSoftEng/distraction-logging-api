@@ -1,0 +1,32 @@
+{% extends "default.html" %}
+{% block content %}
+    <header>
+        <h1>The Distraction Shield</h1>
+        <p>Logs</p>
+    </header>
+    <p>All information from the database is shown below.</p>
+
+    <table class="sortable">
+        <tr>
+            <th class="clickable">ID</th>
+            <th class="clickable">userID</th>
+            <th class="clickable">Event</th>
+            <th class="clickable">Trigger</th>
+            <th class="clickable">Value</th>
+            <th class="clickable">Time</th>
+            <th class="clickable">Type</th>
+        </tr>
+
+        {% for row in data %}
+        <tr>
+            <td>{{ row.id }}</td>
+            <td>{{ row.userID }}</td>
+            <td>{{ row.event }}</td>
+            <td>{{ row.trigger }}</td>
+            <td>{{ row.value }}</td>
+            <td>{{ row.time }}</td>
+            <td>{{ row.type }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
