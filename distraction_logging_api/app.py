@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from database import session_scope, Log
+from .database import session_scope, Log
 from flask_cors import CORS, cross_origin
 app = Flask(__name__)
 CORS(app)
