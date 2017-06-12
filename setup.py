@@ -1,7 +1,7 @@
 import setuptools
 
 setuptools.setup(
-    name="distraction-logging-api",
+    name="distraction_logging_api",
     version="1.2",
     packages=setuptools.find_packages(),
     include_package_data=True,
