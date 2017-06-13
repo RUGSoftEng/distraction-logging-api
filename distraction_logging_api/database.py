@@ -14,12 +14,15 @@ Base = declarative_base()
 
 
 class Log(Base):
-    """ Table for storing the log information. """
+    """ Table for storing the log information """
     __tablename__ = 'log'
-    id = Column(String(250), primary_key=True)
-    event = Column(String(250), nullable=False)
-    value = Column(String(250), nullable=False)
-    time = Column(String(250), nullable=False)
+    id = Column(String(250), primary_key=True) #Primary key, see dbSize in main.py
+    userID = Column(String(250), nullable=False) #ID corresponding to users. Generated for each user and sent from extension
+    trigger = Column(String(250), nullable=False) #Which user action was made
+    event = Column(String(250), nullable=False) #What the user did, modified/added/intercepted etc
+    value = Column(String(250), nullable=False) #The value of the event, eg user changed slider to value: 56
+    time = Column(String(250), nullable=False) #Time of event
+    type = Column(String(250), nullable=False) #Type of event, settings/statistics etc
 
 
 # create the database

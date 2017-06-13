@@ -1,0 +1,3 @@
+recursive-include distraction_logging_api/static *
+recursive-include distraction_logging_api/templates *
+
