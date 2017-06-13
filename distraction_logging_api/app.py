@@ -14,6 +14,7 @@ with session_scope() as db_session:
 def index():
     with session_scope() as db_session:
         data = db_session.query(Log).all()
+        data = data[-50:]
         # when using the object retrieved from the database outside
         # the with-scope, use the line below to extract the data.
         db_session.expunge_all()
